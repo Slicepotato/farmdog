@@ -1,7 +1,7 @@
 /* ========================================================
  * CSS
  * ===================================================== */
- 
+
 #page {
 	width: 720px;
 	margin: 0 auto
@@ -46,6 +46,14 @@
 	background-repeat: no-repeat;
 }
 
+#loading {
+  display: block;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 3em 0 0;
+}
+
 #panel {
 	list-style-type:none;
 	margin:0;
@@ -76,7 +84,7 @@
 	color:#fff;
 	box-shadow: inset 0 0 8px rgba(0,0,0,.5);
 }
-#panel li#free.select { 
+#panel li#free.select {
 	background:#333 url('../img/free-space-inv.png');
 	background-size: 85%;
 	background-position: 50% 50%;
@@ -85,7 +93,7 @@
 
 #panel li:hover { cursor:pointer; }
 
-#panel li  span { 
+#panel li  span {
 	height: 120px;
     display: table-cell;
     vertical-align: middle;
