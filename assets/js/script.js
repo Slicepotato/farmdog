@@ -2,8 +2,7 @@ $(document).ready(function(){
 	var today = moment().format('dddd, MMMM Do YYYY');
 	$('#date').html(today);
 
-	/* Use this for Later
-	//
+	// Read / Format the JSON array from the PHP server output
 	$.ajax({
 			type:'GET',
 			url:'get_squares.php',
@@ -23,8 +22,7 @@ $(document).ready(function(){
 			}
 	});
 
-	*/
-
+	/* Google Sheets API
 	var sheetId = '1e3QmEU6BrlpkUmbaviNfwGx0vpfOL740Nwj8gDboTBQ';
 	$.getJSON("https://spreadsheets.google.com/feeds/list/"+ sheetId +"/1/public/values?alt=json", function(data) {
   //first row "title" column
@@ -40,6 +38,7 @@ $(document).ready(function(){
 			$(this).toggleClass('select');
 		});
 	});
+	*/
 
 	dialog = $( "#request" ).dialog({
 		modal: true,
