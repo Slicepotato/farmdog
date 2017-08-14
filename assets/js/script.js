@@ -32,7 +32,12 @@ $(document).ready(function(){
 	fetchCard();
 
 	/* Google Sheets API
-	var sheetId = '1e3QmEU6BrlpkUmbaviNfwGx0vpfOL740Nwj8gDboTBQ';
+	// You will need to replace the 'sheetID' variable with the corresponding Google Spreadsheet ID 
+	// of the target sheet that you wish to use as your data table
+	*/
+	
+	/*
+	var sheetId = '';
 	$.getJSON("https://spreadsheets.google.com/feeds/list/"+ sheetId +"/1/public/values?alt=json", function(data) {
   //first row "title" column
 		$.each(data.feed.entry, function(key, cell) {
